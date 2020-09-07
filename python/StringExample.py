@@ -57,7 +57,9 @@ print("I eat %s apples" %"five")
 #3. 숫자 값을 나타내는 변수로 대입
 num = 3
 print("I eat %d apples" %num)
-#4. 2개 이상의 값 넣기
+#4. 2개 이상의 값 넣기(%뒤에 괄호와 중간에 콤마로 구분)
 num = 10
 day = "three"
 print("I ate %d apples. so I was sick for %s days" %(num, day))
+
+
