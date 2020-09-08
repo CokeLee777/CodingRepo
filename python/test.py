@@ -1,5 +1,4 @@
-import time
-start_time = time.time()
+
 n = int(input())
 x,y = 1,1
 plans = input().split()
@@ -20,5 +19,4 @@ for plan in plans:
     x,y = nx,ny
 
 print(x,y)
-end_time = time.time()
-print(end_time - start_time)
+

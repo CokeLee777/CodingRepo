@@ -1,6 +1,5 @@
 #p.110 상하좌우
-import time
-start_time = time.time()
+
 #공간의 크기 사용자지정
 N = int(input())
 
@@ -26,6 +25,3 @@ for i in range(len(Plan)):
             n += 1
 
 print(n,m)
-
-end_time = time.time()
-print(end_time - start_time)
