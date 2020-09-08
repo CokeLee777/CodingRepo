@@ -6,8 +6,6 @@ def dfs(graph, v, visited):
         if not visited[i]:
             dfs(graph, i, visited)
 
-
-
 graph = [
     [],
     [2,3,8],
@@ -21,6 +19,5 @@ graph = [
 ]
 
 visited = [False]*9
-
 
 dfs(graph, 1, visited)
