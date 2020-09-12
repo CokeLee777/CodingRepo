@@ -10,8 +10,8 @@ for i in range(N):
     #이름과 점수 튜플에 담아서 리스트에 저장
     arr.append((input_data[0],int(input_data[1])))
 
+#기본 라이브러리로 정렬
 arr = sorted(arr, key=lambda student: student[1]) 
 
 for student in arr:
     print(student[0], end=' ')
-    
