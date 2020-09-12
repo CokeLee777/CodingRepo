@@ -23,13 +23,16 @@ def bfs(x, y):
 
     #큐가 빌 때까지 반복
     while queue:
+        #먼저 들어간 것이 먼저 나온다. -> 큐 연산
         x, y = queue.popleft()
         #현재 위치에서 네 방향으로의 위치확인
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
             #미로 찾기 공간을 벗어난 경우 무시
-            if nx < 0 or ny < 0 or nx >= row or ny >= column:
+            if nx < 0 or ny < 0 or nx >= row or 
+            
+            ny >= column:
                 continue
             #괴물이 있는 경우 무시
             if graph[nx][ny] == 0:
