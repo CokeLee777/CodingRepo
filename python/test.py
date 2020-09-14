@@ -9,11 +9,11 @@ def binary_search(array, start, end, target):
     mid = (start + end) // 2
     
     if target < array[mid]:
-        binary_search(array, start, mid - 1, target)
+        return binary_search(array, start, mid - 1, target)
     elif target == array[mid]:
         return mid
     else:
-        binary_search(array, mid + 1, end, target)
+        return binary_search(array, mid + 1, end, target)
     
 
 #원소의 갯수 n 과 찾고자 하는 문자열 입력 받기
