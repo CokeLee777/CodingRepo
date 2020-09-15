@@ -1,30 +1,13 @@
-#이진 탐색
+#한 번 계산된 결과를 메모이제이션 하기위한 리스트 초기화
+d = [0] * 100
 
-#이진 탐색 재귀함수 구현
-def binary_search(array, start, end, target):
-    #탐색을 하다가 찾을 데이터가 없어서 start 가 end 를 넘어가면 None 리턴
-    if start > end:
-        return None
-    #중간점 지정
-    mid = (start + end) // 2
-    
-    if target < array[mid]:
-        return binary_search(array, start, mid - 1, target)
-    elif target == array[mid]:
-        return mid
-    else:
-        return binary_search(array, mid + 1, end, target)
-    
+#첫 번째 피보나치 수와 두 번째 피보나치 수는 1
+d[0] = 1
+d[1] = 1
+n = 99
 
-#원소의 갯수 n 과 찾고자 하는 문자열 입력 받기
-n, target = map(int, input().split())
+#피보나치 함수 반복문으로 구현
+for i in range(3, n+1):
+    d[i] = d[i-1] + d[i-2]
 
-#전체 원소 입력
-array = list(map(int, input().split()))
-
-result = binary_search(array, 0, n-1, target)
-
-if result == None:
-    print('원소를 찾을 수 없습니다.')
-else:
-    print(result + 1)
+print(d[n])
