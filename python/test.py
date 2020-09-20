@@ -7,6 +7,8 @@ start = 3
 def binary(start,N):
     if N == 1 or N == 2:
         return d[N]
-    
+    if N % 2 == 0:
+
+
     
 
