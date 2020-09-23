@@ -1,1 +1,3 @@
-print('강한친구 대한육군\n강한친구 대한육군')
+list1 = ['a','b','c','a']
+dic = {string: 0 for string in list1}
+print(dic)
