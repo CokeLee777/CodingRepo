@@ -1,3 +1,7 @@
-list1 = ['a','b','c','a']
-dic = {string: 0 for string in list1}
-print(dic)
+a = ['123','2','3']
+d = {}
+d['123'] = d.get('123','123')
+d['124'] = d.get('124','124')
+print(str(d.get('123'))[:3])
+print('12' in '312')
+print('123' - '3')
