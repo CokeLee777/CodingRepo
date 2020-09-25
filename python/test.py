@@ -1,7 +1,6 @@
-a = ['123','2','3']
-d = {}
-d['123'] = d.get('123','123')
-d['124'] = d.get('124','124')
-print(str(d.get('123'))[:3])
-print('12' in '312')
-print('123' - '3')
+phoneBook = [12,88,123,567,1235]
+
+zipped = zip(phoneBook,phoneBook[2:])
+print(next(zipped)) #(12,88)
+print(next(zipped)) #(88,123)
+print(next(zipped)) #(123,567)
