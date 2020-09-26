@@ -1,6 +1,8 @@
-clothes = [['1','1'],['12','1'],['32','2']]
-dic_clothes = {}
-for name,typ in clothes:
-    dic_clothes[typ] = dic_clothes.get(typ,name)
+input_s = str(input())
+s = []
+for i in range(len(input_s)):
+    s.append(input_s[i])
+    if i == len(input_s) - 1:
+        s.append(s[i])
 
-print(dic_clothes)
+print(s)
