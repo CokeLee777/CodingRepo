@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      li{
+        color:red;
+        text-decoration:underline;
+      }
+      /* id 값이 select인 것만 디자인을 변경한다. */
+      #select{
+        font-size:40px;
+      }
+      .deactive{
+        text-decoration:line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="deactive">수업의 순서</h1>
+    <ul>
+      <li class="deactive">HTML</li>
+      <!-- id 지정 -->
+      <li id="select">CSS</li>
+      <li class="deactive">JavaScript</li>
+    </ul>
+  </body>
+</html>
