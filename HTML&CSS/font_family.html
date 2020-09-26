@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      #type1{
+        font-size: 5rem;
+        /* 우선순위에 따라서 폰트들을 지정 */
+        /* arial 이 없으면 verdana가 나오고 verdana가 없으면 다음것이 적용이 된다. */
+        font-family: arial,verdana,"Helvetica Neue", sans-serif monospace;
+        /* 폰트를 굵게 표시 */
+        font-weight: bold;
+        /* 폰트 사이즈의 몇배만큼 줄간격이 떨어짐 */
+        line-height: 2;
+      }
+      #type2{
+        /* 위에 사용했던 속성들을 한번에 표시 */
+        /* 단 순서를 지켜야함 */
+        font:bold 5rem/2 arial, verdana, "Helvetica Neue", serif;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="type1">
+      Hello World<br>
+      Hello World
+    </p>
+    <p id="type2">
+      Hello World<br>
+      Hello World
+    </p>
+  </body>
+</html>
