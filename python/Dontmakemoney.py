@@ -7,6 +7,9 @@ coins = list(map(int, input().split()))
 #동전들 정렬하기(오름차순)
 coins.sort()
 
+#결과값 초기화
+result = 1
+
 d = [0]*1000000
 #0은 만들수 있다고 임의로 가정
 d[0] = 1
