@@ -1,50 +1,58 @@
-#맵의 세로크기, 가로크기 입력
+#맵의 세로크기 가로크기 입력받기
 n,m = map(int, input().split())
-#캐릭터의 시작위치와 바라보는 방향 입력
-#방향 0:북,1:동,2:남,3:서
-x,y,d = map(int, input().split())
 
-#이동 반경 생성 -> 북,동,남,서 순서로 쓴다
-dx = [-1,0,1,0]
-dy = [0,-1,0,1]
-
-nx = 0
-ny = 0
-
+#방문한 위치를 저장하기 위한 맵 생성
 visited = [[0]*m for _ in range(n)]
 
+#게임 캐릭터의 시작좌표와 바라보는 방향 입력
+x,y,direction = map(int, input().split())
+#시작 위치 방문처리
+visited[x][y] = 1
+
+#맵 입력받기
 graph = []
-#맵 생성 육지:0,바다:1 -> 캐릭터의 처음 위치는 항상 육지이다
 for i in range(n):
     graph.append(list(map(int, input().split())))
 
-#현재 위치 방문처리
-graph[x][y] = 1
-#방문한 칸의 갯수 세는 변수
+#북 서 남 동 순으로 리스트 생성
+dx = [-1,0,1,0]
+dy = [0,-1,0,1]
+
+#반시계방향으로 회전하는 함수 생성
+def turn_left():
+    global direction
+    direction -= 1
+    if direction == -1:
+        direction = 3
+
 count = 1
-turncount = 0
+turn_count = 0
+#게임 시작
 while True:
-    #왼쪽 방향으로 회전
-    d -= 1
-    #방향이 4가 될 경우 북쪽방향으로 처리
-    if d == -1:
-        d = 3
-    #움직인 좌표 처리
-    nx = x + dx[d]
-    ny = y + dy[d]
-    #현재 방향이 육지이고 가보지 않앗다면
-    if graph[nx][ny] == 0 and visited[nx][ny] == 0:
-        #현재 방향이 바다가 아니라면
-        count += 1
+    #반시계 방향 회전
+    turn_left()
+    turn_count += 1
+    nx = x + dx[direction]
+    ny = y + dy[direction]
+    #캐릭터가 가보지않은 칸이거나 바다가 아닌경우
+    if visited[nx][ny] == 0 and graph[nx][ny] != 1:
         x = nx
         y = ny
         visited[nx][ny] = 1
-        graph[nx][ny] = 1
-    elif graph[x-dx[d]][y-dy[d]] != 1:
-        x -= dx[d]
-        y -= dy[d]
+        count += 1
+        turn_count = 0
+    elif visited[nx][ny] != 0 and turn_count != 4:
         continue
-    else:
+    
+    #캐릭터가 네 방향모두 이미 가본칸이거나 바다로 되어있는경우
+    if turn_count == 4 and graph[x-dx[direction]][y-dy[direction]] != 1:
+        x -= dx[direction]
+        y -= dy[direction]
+        continue 
+    
+    if turn_count == 4 and graph[x-dx[direction]][y-dy[direction]] == 1:
         break
+
+    
 
 print(count)
