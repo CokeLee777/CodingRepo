@@ -10,12 +10,8 @@
 <body>
 	<h1 id="heading">자바스크립트</h1>
 	<p id="text">위 텍스트를 클릭해 보세요</p>
-
-	<script>
-		var heading = document.querySelector('#heading');
-		heading.onclick = function() {
-			heading.style.color = "red";
-		}
-	</script>
+	<!-- 현재폴더의 하위폴더js에 있는 change.js 를 스크립트태그안에 삽입하겠다라는 뜻이다. -->
+	<script src="js/change.js"></script>
+	<!-- 보통 script 태그는 body 태그가 끝나는 지점 바로앞에 삽입한다. -->
 </body>
 </html>
