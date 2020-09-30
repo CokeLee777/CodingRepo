@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            border-bottom: 1px solid gray;
+            padding-left: 20px;
+        }
+        footer{
+            border-top: 1px solid gray;
+            padding: 20px;
+            text-align: center;
+        }
+        .content{
+            display: flex;
+        }
+        .content nav{
+            border-right: 1px solid gray;
+        }
+        .content aside{
+            border-left: 1px solid gray;
+        }
+        /*        화면이 500px 보다 작아졌을때*/
+        @media(max-width:500px){
+            .content{
+                flex-direction: column;
+            }
+            .content nav, .content aside{
+                border:none;
+                flex-basis: auto;
+            }
+            main{
+                order:0;
+            }
+            nav{
+                order:1;
+            }
+            aside{
+                order:2;
+                display:none;
+            }
+        }
+        nav, aside{
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main{
+            padding: 10px;
+        }
+        nav{
+            /* 순서를 지정 */
+            order: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>생활코딩</h1>
+        </header>
+        <section class="content">
+            <nav>
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                </ul>
+            </nav>
+            <main>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, modi non? Recusandae minus cum velit aliquid sed dolorem necessitatibus illum, pariatur mollitia nemo quidem at veniam facilis reiciendis inventore quam!  
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, modi non? Recusandae minus cum velit aliquid sed dolorem necessitatibus illum, pariatur mollitia nemo quidem at veniam facilis reiciendis inventore quam!  
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, modi non? Recusandae minus cum velit aliquid sed dolorem necessitatibus illum, pariatur mollitia nemo quidem at veniam facilis reiciendis inventore quam!  
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, modi non? Recusandae minus cum velit aliquid sed dolorem necessitatibus illum, pariatur mollitia nemo quidem at veniam facilis reiciendis inventore quam!  
+            </main>
+            <aside>
+                AD
+            </aside>
+        </section>
+        <footer>
+            <a href="https://opentutorials.org/course/1">홈페이지</a>
+        </footer>
+    </div>
+</body>
+</html>
