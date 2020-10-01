@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        h1{
+            background-color: deepskyblue;
+            color: white;
+            display: inline-block;
+            padding: 5px;
+            font-size: 3rem;
+            margin: 100px;
+/*            크기를 x축으로 0.5배 y축으로 0.5배로 만든다.*/
+/*            transform: scaleX(0.5) scaleY(0.5);*/
+            transform: scale(0.5,0.5);
+        }
+        h1:hover{
+            transform: scale(1.5);
+            transform-origin: left bottom;
+            transition: all 1s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello Transform!</h1>
+</body>
+</html>

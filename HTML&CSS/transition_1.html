@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        a{
+            font-size: 3rem;
+            display: inline-block;
+/*            모든 효과에 대해 적용*/
+/*            transition-property: all;*/
+/*            장면전환이 1초에 걸쳐서 일어나게한다.*/
+/*            transition-duration: 0.1s;*/
+            
+/*            위에 코드와 같은 처리를 하는 간단한 코드*/
+            transition: all 0.1s;
+            
+/*            따로따로 처리를 할 수도 있다.*/
+/*            transition: font-size 1s, transform 0.1s;*/
+        }
+/*        사용자가 클릭했을때 효과처리*/
+/*        클릭 이벤트는 블럭에서만 효과가 나타나기 때문에 display block 으로 바꾼다.*/
+        a:active{
+            transform: translate(20px, 20px);
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Click</a>
+</body>
+</html>
