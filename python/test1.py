@@ -1,5 +1,2 @@
-graph = []
-for i in range(5):
-    graph.append(list(map(int, input())))
-
-print(graph)
+graph = [1,2,3,4,5,6,7,8,9]
+print(sum(graph[:4]))
