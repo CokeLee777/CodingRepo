@@ -1,2 +1,3 @@
-graph = [1,2,3,4,5,6,7,8,9]
-print(sum(graph[:4]))
+n = [1,3]
+m = [2,2]
+print(n-m)
