@@ -4,7 +4,7 @@ function a(){
 }
 */
 //익명함수 - javascript 에서는 함수가 값이다.
-let a = function(){
+let a = function(){ 
     console.log('A');
 }
 
