@@ -6,12 +6,12 @@ module.exports = {
       <!doctype html>
       <html>
       <head>
-      <!--query string 의 id 값으로 title 을 준다.-->
+        <!--query string 의 id 값으로 title 을 준다.-->
         <title>WEB1 - ${title}</title>
         <meta charset="utf-8">
       </head>
       <body>
-        <h1><a href="/">WEB</a></h1>
+        <h1><a href="/">WEB</a></h1>       
         ${list}
         ${control}
         ${body}
