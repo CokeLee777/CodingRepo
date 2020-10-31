@@ -1,7 +1,5 @@
 const http = require('http');
 const url = require('url');
-const template = require('./lib/template.js');
-const db = require('./lib/db.js');
 const topic = require('./lib/topic.js');
 
 const app = http.createServer(function(request,response){
@@ -20,7 +18,6 @@ const app = http.createServer(function(request,response){
         response.end('Not found');
     }
 
-    
 });
 
 app.listen(3000);
