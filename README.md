@@ -3,8 +3,8 @@
 
 ### 공부한 내용
 **HTML,CSS 문법**
-
 **JavaScript 문법**
-
 **Node.js 프로젝트**
+**Python 자료구조와 알고리즘**
+**Machine learning**
 
